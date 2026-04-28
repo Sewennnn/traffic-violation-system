@@ -31,12 +31,18 @@ A real-time streaming pipeline that detects traffic violations from high-volume 
 - Supports continuous streaming workloads
 
 📁 Project Structure
-producer/        Kafka event generator  
-consumer/        Spark streaming processor  
-models/          Violation detection logic  
-db/              MongoDB integration  
-visualizations/  Analytics & plots  
-docker/          Deployment setup  
+```text
+- producer/
+  - producer_a.py → Event generator (type A traffic data)
+  - producer_b.py → Event generator (type B traffic data)
+  - producer_c.py → Event generator (type C traffic data)
+
+- streaming/
+  - data_design_streaming.py → Kafka + Spark Structured Streaming pipeline
+
+- visualization/
+  - dashboard.py → Traffic violation analytics & plots
+```
 
 💡 Key Highlights
 - Built a distributed streaming system using Kafka + Spark
